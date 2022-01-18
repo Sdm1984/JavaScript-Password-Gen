@@ -1,6 +1,9 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$!%^&*()_+=-";
+var uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+var lowercaseChar = "abcdefghijklmnopqrstuvwxyz"
+var numericalChar = "0123456789"
+var symbolChar = "@#$!%^&*()_+=-";
 var passwordLength = 128
 var passwordValue = '';
 
