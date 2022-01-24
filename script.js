@@ -10,10 +10,16 @@ var chosenChar = ''; // User will enter chosenChar - this could be anything
 // Acceptance criteria and prompts
 function generatePassword(){
 var passwordLength = prompt ("How many characters would you like your password to contain?");
+passwordLength = Number(passwordLength);
+if (passwordLength < 8 || passwordLength > 128){
+  passwordLength = prompt ("Please enter a password with a min of 8 to a max of 128 characters.") 
+  console.log(passwordLength)
+}
 var islowercaseChar = confirm ("Click OK to confirm whether or not to include lowercase characters.");
 var isuppercaseChar = confirm ("Click OK to confirm whether or not to include uppercase characters.");
 var isnumericalChar = confirm("Click OK to confirm whether or not to include numeric characters.");
 var issymbolChar = confirm ("Do you want to include special characters?");
+
 
 // Write out if "statements" for characters ALL *Char
 
@@ -23,17 +29,17 @@ if (islowercaseChar){
 }
 
 if (isuppercaseChar){
-  chosenChar += isuppercaseChar;
+  chosenChar += uppercaseChar;
   console.log(chosenChar)
 }
 
 if (isnumericalChar){
-  chosenChar += isnumericalChar;
+  chosenChar += numericalChar;
   console.log(chosenChar)
 }
 
 if (issymbolChar){
-  chosenChar += issymbolChar;
+  chosenChar += symbolChar;
   console.log(chosenChar)
 }
 
